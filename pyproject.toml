@@ -1,0 +1,15 @@
+[project]
+name = "docs-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "agent-framework>=1.0.0b251114",
+    "azure-ai-agentserver-agentframework>=1.0.0b5",
+    "python-dotenv>=1.0.1",
+    "mcp>=1.0.0b8",
+    "mcp-client>=0.0.0",
+    "agent-framework-devui>=1.0.0b251114",
+]
+prerelease = true
