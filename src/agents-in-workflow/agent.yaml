@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/AgentSchema/refs/heads/main/schemas/v1.0/ContainerAgent.yaml
+
+kind: hosted
+name: agents-in-workflow
+description: |
+    A workflow agent that responds to product launch strategy inquiries by concurrently leveraging insights from three specialized agents.
+metadata:
+    authors:
+        - Microsoft Agent Framework Team
+    tags:
+        - Azure AI AgentServer
+        - Microsoft Agent Framework
+        - Workflows
+protocols:
+    - protocol: responses
+      version: ""
+environment_variables:
+    - name: AZURE_OPENAI_ENDPOINT
+      value: ${AZURE_OPENAI_ENDPOINT}
+    - name: AZURE_OPENAI_CHAT_DEPLOYMENT_NAME
+      value: gpt-4o-mini
