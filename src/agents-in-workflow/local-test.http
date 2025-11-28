@@ -1,0 +1,14 @@
+# @baseUrl = http://localhost:8088
+@baseUrl = https://proj-hosted-agents-resource.services.ai.azure.com/api/projects/proj-hosted-agents/agents/agents-in-workflow/versions/4
+ 
+POST {{baseUrl}}/responses
+Content-Type: application/json
+ 
+{
+    "messages": [
+            {
+                "role": "user",
+                "content": "where is o4-mini available?"
+            }
+        ]
+}

@@ -3,14 +3,15 @@
 kind: hosted
 name: agents-in-workflow
 description: |
-    A workflow agent that responds to product launch strategy inquiries by concurrently leveraging insights from three specialized agents.
+    A workflow agent that answers questions about Microsoft services using Microsoft Learn as a knowledge base.
 metadata:
     authors:
-        - Microsoft Agent Framework Team
+        - Chris Arendt
     tags:
         - Azure AI AgentServer
         - Microsoft Agent Framework
         - Workflows
+        - Microsoft Learn MCP
 protocols:
     - protocol: responses
       version: ""
@@ -18,4 +19,6 @@ environment_variables:
     - name: AZURE_OPENAI_ENDPOINT
       value: ${AZURE_OPENAI_ENDPOINT}
     - name: AZURE_OPENAI_CHAT_DEPLOYMENT_NAME
-      value: gpt-4o-mini
+      value: gpt-4.1-mini
+    - name: AZURE_OPENAI_RESPONSES_DEPLOYMENT_NAME
+      value: gpt-4.1-mini
