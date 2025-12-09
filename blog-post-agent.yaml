@@ -38,7 +38,7 @@ metadata:
     - Content Creation
 
 template:
-  name: BlogPostAgent
+  # name: BlogPostAgent
   # The type of agent - "hosted" for HOBO (Hosted Bring Your Own)
   kind: hosted
   # Supported protocols
