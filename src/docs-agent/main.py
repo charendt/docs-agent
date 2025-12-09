@@ -27,7 +27,7 @@ async def patched_run_stream(self, message, **kwargs):
 
 Workflow.run_stream = patched_run_stream
 
-MODE = os.getenv("MODE", "devui")  # "devui", "cli", or "hosted_agent"
+MODE = os.getenv("MODE", "hosted_agent")  # "devui", "cli", or "hosted_agent"
 
 async def create_workflow() -> tuple[Workflow, ChatAgent, ChatAgent, ChatAgent, MCPStreamableHTTPTool]:
     load_dotenv(override=True)

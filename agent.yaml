@@ -1,5 +1,5 @@
 # Unique identifier/name for this agent
-name: agents-in-workflow
+name: docs-agent
 # Brief description of what this agent does
 description: >
   A workflow agent that responds to product launch strategy inquiries by concurrently leveraging insights from three specialized agents.
@@ -12,7 +12,7 @@ metadata:
     - Microsoft Agent Framework
     - Workflows
 template:
-  name: agents-in-workflow
+  name: docs-agent
   # The type of agent - "hosted" for HOBO, "container" for COBO
   kind: hosted
   protocols:
