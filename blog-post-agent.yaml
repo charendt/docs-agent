@@ -1,0 +1,60 @@
+# ============================================================================
+# Blog Post Agent - Agent Definition for azd ai init
+# ============================================================================
+#
+# This file defines the agent for use with:
+#   azd ai agent init -m agent.yaml
+#
+# Or copy this URL for remote initialization:
+#   azd ai agent init -m https://github.com/<your-org>/<your-repo>/blob/main/agent.yaml
+# ============================================================================
+
+# Unique identifier/name for this agent
+name: BlogPostAgent
+
+# Brief description of what this agent does
+description: >
+  A multi-agent workflow that creates SEO-optimized blog posts. The workflow 
+  orchestrates four specialized agents: Research (gathers information), 
+  Writer (drafts content), Editor (reviews with quality scoring and revision loop), 
+  and SEO (optimizes for search engines).
+
+metadata:
+  # Example interaction to show in the playground
+  example:
+    - role: user
+      content: |-
+        Write a blog post about the future of artificial intelligence in healthcare
+  # Categorization tags for organizing and discovering agents
+  authors:
+    - Chris Arendt
+  tags:
+    - Azure AI AgentServer
+    - Microsoft Agent Framework
+    - Workflows
+    - Multi-Agent
+    - Blog Post
+    - SEO
+    - Content Creation
+
+template:
+  name: BlogPostAgent
+  # The type of agent - "hosted" for HOBO (Hosted Bring Your Own)
+  kind: hosted
+  # Supported protocols
+  protocols:
+    - protocol: responses
+  # Environment variables passed to the container
+  environment_variables:
+    - name: AZURE_AI_PROJECT_ENDPOINT
+      value: ${AZURE_AI_PROJECT_ENDPOINT}
+    - name: AZURE_AI_MODEL_DEPLOYMENT_NAME
+      value: "{{chat}}"
+    - name: APPLICATIONINSIGHTS_CONNECTION_STRING
+      value: \
+
+# Azure resources required by the agent
+resources:
+  - kind: model
+    id: gpt-4.1-mini
+    name: chat

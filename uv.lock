@@ -2,6 +2,9 @@ version = 1
 revision = 3
 requires-python = ">=3.13"
 
+[options]
+prerelease-mode = "allow"
+
 [[package]]
 name = "a2a-sdk"
 version = "0.3.15"
@@ -809,6 +812,7 @@ dependencies = [
     { name = "agent-framework" },
     { name = "agent-framework-devui" },
     { name = "azure-ai-agentserver-agentframework" },
+    { name = "azure-ai-projects" },
     { name = "mcp" },
     { name = "mcp-client" },
     { name = "python-dotenv" },
@@ -819,6 +823,7 @@ requires-dist = [
     { name = "agent-framework", specifier = ">=1.0.0b251114" },
     { name = "agent-framework-devui", specifier = ">=1.0.0b251114" },
     { name = "azure-ai-agentserver-agentframework", specifier = ">=1.0.0b5" },
+    { name = "azure-ai-projects", specifier = ">=1.1.0b4" },
     { name = "mcp", specifier = ">=1.0.0b8" },
     { name = "mcp-client", specifier = ">=0.0.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },

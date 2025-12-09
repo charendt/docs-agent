@@ -11,5 +11,9 @@ dependencies = [
     "mcp>=1.0.0b8",
     "mcp-client>=0.0.0",
     "agent-framework-devui>=1.0.0b251114",
+    "azure-ai-projects>=1.1.0b4",
 ]
 prerelease = true
+
+[tool.uv]
+prerelease = "allow"
